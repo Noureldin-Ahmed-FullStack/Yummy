@@ -1,0 +1,215 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+  <link rel="stylesheet" href="CSS/venobox.min.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="CSS/animate.compat.css">
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/all.min.css">
+  <link rel="stylesheet" href="Style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Merienda&family=Montserrat:ital,wght@0,200;1,100&family=Rajdhani:wght@300&display=swap"
+    rel="stylesheet">
+
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+
+  <!-- <nav id="MyNav" class="navbar bg-black navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+      <div class="ms-3 d-flex align-items-center" onclick="toggleSideNav()">
+        <img src="Img/BG Logo.png" id="navLogoImg" class="NavLogo" alt="">
+        <a class="navbar-brand NavBrandText" href="#">Noureldin</a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto me-5 align-items-center">
+          <li class="nav-item">
+            
+            <input type="search" placeholder="search" name="" id="">
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="DarkMode"><i style="font-size: 1.6rem;"
+                class="fa-solid fa-circle-half-stroke"></i></a>
+
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+
+
+
+  <div id="loading" class="loadingScreen">
+    <div class="sk-cube-grid">
+      <div class="sk-cube sk-cube1"></div>
+      <div class="sk-cube sk-cube2"></div>
+      <div class="sk-cube sk-cube3"></div>
+      <div class="sk-cube sk-cube4"></div>
+      <div class="sk-cube sk-cube5"></div>
+      <div class="sk-cube sk-cube6"></div>
+      <div class="sk-cube sk-cube7"></div>
+      <div class="sk-cube sk-cube8"></div>
+      <div class="sk-cube sk-cube9"></div>
+    </div>
+  </div>
+  <audio id="myAudio" autoplay loop>
+    <source src="Music/daylight.mp3" type="audio/mpeg">
+  </audio>
+  <div class="scroller2" id="scroller2">
+    <a><i class="fa-solid fa-music"></i></a>
+  </div>
+
+
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top myNav">
+    <div class="container-fluid">
+      <div class="ms-3 d-flex align-items-center" onclick="toggleSideNav()">
+        <!-- <img src="Img/BG Logo.png" id="navLogoImg" class="NavLogo" alt=""> -->
+        <div id="stopperBool" class="animated tada infinite slow">
+          
+          <i class="fa-solid fa-arrow-down-wide-short text-light me-3 cursor-pointer" style="font-size: 1.5rem;"></i>
+        </div>
+        <a class="navbar-brand NavBrandText" href="#">Yummy</a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse align-items-center" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:void(0)">Link</a>
+          </li> -->
+        </ul>
+        <div class="d-flex">
+          <input class="form-control me-2" id="SearchBar" type="text" placeholder="Search">
+          <button class="btn btn-primary" onclick="searchDown()" type="button">Search</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 level">
+        <div id="mySideNav" class="side-nav">
+          <!-- Side Nav Content -->
+          <ul class="nav flex-column mt-5">
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="getDefault()">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="ContactUs()">ContactUs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="getCategories()">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="GetCountrys()">Area</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="GetIngredient()">Ingredients</a>
+            </li>
+          </ul>
+          <div class="nav-footer">
+            <div class="icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <div class="footer">
+              <p>Copyright Â© 2019 All Rights Reserved.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="container ">
+    <div class="row">
+      <div class="col-sm-12 mt-5">
+        <ul class="d-flex justify-content-center noStyle mt-4 bg-dark rounded-5 p-3">
+          <li><a href="#">A</a></li>
+          <li><a href="#">B</a></li>
+          <li><a href="#">C</a></li>
+          <li><a href="#">D</a></li>
+          <li><a href="#">E</a></li>
+          <li><a href="#">F</a></li>
+          <li><a href="#">G</a></li>
+          <li><a href="#">H</a></li>
+          <li><a href="#">I</a></li>
+          <li><a href="#">J</a></li>
+          <li><a href="#">K</a></li>
+          <li><a href="#">L</a></li>
+          <li><a href="#">N</a></li>
+          <li><a href="#">M</a></li>
+          <li><a href="#">O</a></li>
+          <li><a href="#">P</a></li>
+          <li><a href="#">Q</a></li>
+          <li><a href="#">R</a></li>
+          <li><a href="#">S</a></li>
+          <li><a href="#">T</a></li>
+          <li><a href="#">U</a></li>
+          <li><a href="#">V</a></li>
+          <li><a href="#">W</a></li>
+          <li><a href="#">X</a></li>
+          <li><a href="#">Y</a></li>
+          <li><a href="#">Z</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="filtered-by" id="filtered-by">
+
+    </div>
+
+  </div>
+  <div class="container mt-1 my-5">
+    <div class="row g-4 " id="MealData">
+
+    </div>
+  </div>
+
+
+
+
+  <script src="JS/jquery-3.7.0.js"></script>
+  <script src="JS/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <script type="text/javascript" src="JS/venobox.min.js"></script>
+  <script src="https://kit.fontawesome.com/046e2871d7.js" crossorigin="anonymous"></script>
+  <script src="JS/wow.min.js"></script>
+
+
+
+
+  <script src="MyScripts.js">
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+:root {
+    /* --primary-color: #e58c12;
+    --secondary-color: #1436f0; */
+    --primary-color: #e58c12;
+    --secondary-color: #1436f0;
+
+
+    --primary-colorDark: #e600e9;
+    --secondary-colorDark: #e58c12;
+    /* --secondary-colorDark: #0b71df; */
+
+    --bg-white: #fff;
+    --bg-grey: #eee;
+    --text-grey: #212529;
+
+
+    --bg-dark-white: #47474798;
+    --bg-dark-grey: #1e1e1e;
+    --text-white: #fff;
+
+    --links: #1436f0;
+
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--text-grey);
+}
+
+.CountryDesc {
+    text-align: center;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.navLogo {
+    cursor: pointer;
+    width: 25px;
+    margin-right: 20px;
+}
+
+.filtered-by {
+    color: var(--text-grey);
+}
+
+.makeBold {
+    font-weight: 900;
+}
+
+.myNav {
+    z-index: 20;
+
+}
+
+.nav-item a {
+    color: #212529;
+}
+
+.noStyle {
+    list-style: none;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+}
+
+.nav-footer {
+    padding-top: 40vh;
+}
+
+.noStyle li {
+    padding: 0 10px;
+
+}
+
+.noStyle li a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.level {
+    z-index: 10;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.country:hover {
+    border: var(--text-grey) 3px solid;
+}
+
+.meal-layer {
+    width: 100%;
+    height: 100%;
+    background-color: #f9f6f6ca;
+    top: 100%;
+    transition: .5s;
+}
+
+.meal:hover {
+    .meal-layer {
+        top: 0;
+    }
+}
+
+.navbar-hidden {
+
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+.navbar-visible {
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.side-nav {
+    font-weight: 900;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    background-color: #c3c3c3;
+    padding: 15px;
+    transition: left 0.3s;
+}
+
+.side-nav.show {
+    left: 0;
+}
+
+.side-nav-toggle {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #2f2f2f;
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.side-nav.show+.side-nav-toggle {
+    left: 250px;
+}
+
+
+
+#loading {
+    display: flex;
+    position: fixed;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(135deg, #d1d1d1, #19232e);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sk-cube-grid {
+    width: 60px;
+    height: 60px;
+    margin: 100px auto;
+}
+
+.sk-cube-grid .sk-cube {
+    width: 33%;
+    height: 33%;
+    background-color: #ffffff;
+    float: left;
+    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+    animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+
+.sk-cube-grid .sk-cube1 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.sk-cube-grid .sk-cube2 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.sk-cube-grid .sk-cube3 {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.sk-cube-grid .sk-cube4 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.sk-cube-grid .sk-cube5 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.sk-cube-grid .sk-cube6 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.sk-cube-grid .sk-cube7 {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.sk-cube-grid .sk-cube8 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.sk-cube-grid .sk-cube9 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+
+    0%,
+    70%,
+    100% {
+        -webkit-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1);
+    }
+
+    35% {
+        -webkit-transform: scale3D(0, 0, 1);
+        transform: scale3D(0, 0, 1);
+    }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+
+    0%,
+    70%,
+    100% {
+        -webkit-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1);
+    }
+
+    35% {
+        -webkit-transform: scale3D(0, 0, 1);
+        transform: scale3D(0, 0, 1);
+    }
+}
+
+
+.scroller2 {
+    cursor: pointer;
+    padding: 15px;
+    position: fixed;
+    z-index: 10000;
+    right: 8px;
+    bottom: 3rem;
+    font-size: 0.7rem;
+    color: #fff;
+    background-image: linear-gradient(135deg, #ff78c7, #6456ff);
+    border-radius: 50%;
+}
+
+.scroller2 a {
+    color: #fff;
+}
